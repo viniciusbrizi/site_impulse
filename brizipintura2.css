@@ -1,0 +1,168 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --hover-color: hsl(0, 0%, 85%); /* Cor de hover para links */
+
+  /*========== Font and typography ==========*/
+  --body-font: "Montserrat Alternates", sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: 0.938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+
+  /*========== Z-Index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive Typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--white-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/*=============== HEADER & NAVIGATION ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para efeito visual */
+  backdrop-filter: blur(10px); /* Desfoque aplicado no background */
+  z-index: var(--z-fixed);
+  transition: background-color 0.3s ease-in-out; /* Transição suave */
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+}
+
+.nav__logo {
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  font-size: var(--h1-font-size);
+}
+
+.nav__menu {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.nav__link {
+  color: var(--white-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav__link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav__toggle {
+  display: none;
+}
+
+.nav__social {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.nav__social-link {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav__social-link:hover {
+  transform: translateY(-0.25rem);
+}
+
+/*=============== MOBILE MENU ===============*/
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 6rem;
+    padding-inline: 2rem;
+    row-gap: 2rem;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .show-menu {
+    left: 0;
+  }
+
+  .nav__toggle {
+    display: block;
+    cursor: pointer;
+    color: var(--white-color);
+    font-size: 1.5rem;
+  }
+}

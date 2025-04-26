@@ -1,0 +1,69 @@
+body {
+    background-color: #5b5b5b;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+section {
+    font-family: 'Kulim Park', sans-serif;
+    font-size: 20px;
+    width: 700px;
+    height: 550px;
+    display: flex;
+    flex-direction: column; /* Ajuste para coluna */
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: whitesmoke;
+    text-align: center;
+    margin: 10px 0; /* Espaçamento entre parágrafos */
+}
+
+.newFont {
+    color: aqua;
+}
+
+.typing {
+    overflow: hidden;
+    border-right: .15em solid whitesmoke;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+h4{
+    color: rgb(14, 219, 255);
+    font-weight: 10;
+}
+button{
+    width: 112px;
+    height: 35px;
+    background-color: #201E1E;
+    color: aqua;
+    border-radius: 10px;
+    border: none;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: whitesmoke;
+    }
+}
