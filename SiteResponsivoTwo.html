@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Responsive navbar - Bedimcode</title>
+   </head>
+
+<body>
+   <header class="header" id="header">
+       <nav class="nav container">
+           <a href="#" class="nav__logo">Logo</a>
+
+           <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                   <li class="nav__item">
+                       <a href="SiteResponsivoBrizi_Pintura.html" class="nav__link">
+                           <i class="ri-arrow-right-up-line"></i>
+                           <span>Home</span>
+                       </a>
+                   </li>
+                   <li class="nav__item">
+                       <a href="#" class="nav__link">
+                           <i class="ri-arrow-right-up-line"></i>
+                           <span>Quem Somos</span>
+                       </a>
+                   </li>
+                   <li class="nav__item">
+                       <a href="#" class="nav__link">
+                           <i class="ri-arrow-right-up-line"></i>
+                           <span>Portfólio</span>
+                       </a>
+                   </li>
+                   <li class="nav__item">
+                       <a href="https://wa.me/5511963491044" class="nav__link">
+                           <i class="ri-arrow-right-up-line"></i>
+                           <span>Solicite Orçamento</span>
+                       </a>
+                   </li>
+               </ul>
+
+               <!-- Botão para fechar o menu -->
+               <div class="nav__close" id="nav-close">
+                   <i class="ri-close-large-line"></i>
+               </div>
+
+               <!-- Redes sociais -->
+               <div class="nav__social">
+                   <a href="https://www.instagram.com/brizi.pinturas/" target="_blank" class="nav__social-link">
+                       <i class="ri-instagram-line"></i>
+                   </a>
+                   <a href="https://wa.me/5511963491044?text=Olá,%20acabei%20de%20visitar%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços!" target="_blank" class="nav__social-link">
+                       <i class="ri-whatsapp-line"></i>
+                   </a>
+               </div>
+           </div>
+
+           <!-- Botão para abrir o menu -->
+           <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+           </div>
+       </nav>
+   </header>
+
+   <!-- Título -->
+   <main>
+       <section class="carousel-container">
+           <h1>Portfólio</h1>
+           <p>Seja bem-vindo ao nosso portfólio</p>
+       </section>
+   </main>
+
+   <!-- Carrossel de vídeos -->
+   <div class="video-container">
+       <div class="carousel">
+           <div class="carousel__images">
+               <video src="img_index/video one.mp4" controls></video>
+               <video src="img_index/Vídeo do WhatsApp de 2025-04-07 à(s) 17.38.54_74aec19c.mp4" controls></video>
+           </div>
+           <button class="carousel__btn carousel__btn--prev">&#10094;</button>
+           <button class="carousel__btn carousel__btn--next">&#10095;</button>
+       </div>
+   </div>
+
+   <!-- Script -->
+   <script src="siteResponsivoTwo.js"></script>
+</body>
